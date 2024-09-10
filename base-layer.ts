@@ -26,7 +26,7 @@ export class AdasBaseLayer extends pulumi.ComponentResource {
       project: args.projectId,
       region: 'us-east1',
       network: network.id,
-      ipCidrRange: '10.0.0.0/24',
+      ipCidrRange: '10.1.0.0/24',
     }, { parent: this });
 
     this.vpcNetworkId = network.id;
