@@ -34,9 +34,9 @@ export function createDatabase(
 
   const dbInstance = new gcp.sql.DatabaseInstance(`postgresql-${args.environment}-db-instance`, {
     databaseVersion: 'POSTGRES_13',
-    region: 'europe-west4',
+    region: 'europe-west3-a',
     settings: {
-      tier: 'db-custom-4-65536',
+       tier: 'db-custom-2-13312',
       diskSize: 250,
       availabilityType: 'ZONAL',
       backupConfiguration: {
