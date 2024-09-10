@@ -16,13 +16,10 @@ export function createServiceAttachment(args: {
     natSubnets: [args.subnetId],
     targetService: args.targetServiceIp,
     connectionPreference: 'ACCEPT_AUTOMATIC',
-    consumerAcceptLists: args.autoAcceptedProjects.map(project =>
-      pulumi.output({
-        projectId: project,
-        connectionLimit: 10, // Example value; adjust according to your requirements
-        // Add other required properties here
-      }) as pulumi.Input<gcp.types.input.compute.ServiceAttachmentConsumerAcceptList>
-    ),
+    consumerAcceptLists: args.autoAcceptedProjects.map(project => ({
+      projectIdOrNum: project,  // Correct field name
+      connectionLimit: 10,      // Adjust this value as necessary
+    }) as gcp.types.input.compute.ServiceAttachmentConsumerAcceptList),
     enableProxyProtocol: false,
   });
 }

@@ -43,14 +43,16 @@ export function createNetworkServices(args: {
     purpose: 'PRIVATE_SERVICE_CONNECT',
   });
 
+
   createServiceAttachment({
     serviceAttachmentName: args.projectPurpose,
     projectId: args.projectId,
     environment: args.environment,
     subnetId: pscSubnet.id,
-    autoAcceptedProjects: ['mb-mcai-transit-service-p-7406', 'mb-mbos-cdw-p-d97d'],
-    targetServiceIp: '172.16.1.2', // IP of traefik GKE LoadBalancer Service for service
+    autoAcceptedProjects: ['mb-mcai-transit-service-p-7406', 'mb-mbos-cdw-p-d97d'],  // Valid project IDs
+    targetServiceIp: '172.16.1.2',  // IP of traefik GKE LoadBalancer Service
   });
+  
 
   createForwardingRule({
     projectId: args.projectId,
