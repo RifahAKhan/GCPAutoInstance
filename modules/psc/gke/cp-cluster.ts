@@ -18,6 +18,7 @@ export class CpGkeCluster extends pulumi.ComponentResource {
       project: args.projectId,
       network: args.network,
       subnetwork: args.subnetwork,
+      initialNodeCount: 1,  // Ensure the initial node count is not zero.
       ...args.additionalClusterConfig,
     }, { parent: this });
 

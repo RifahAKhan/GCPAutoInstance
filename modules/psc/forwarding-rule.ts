@@ -8,7 +8,7 @@ export function createForwardingRule(args: {
   subnetId: pulumi.Input<string>;
   networkId: pulumi.Input<string>;
   forwardingRuleName: string;
-  targetServiceAttachmentUri: string;
+  targetServiceAttachmentUri: string;  // Ensure this is the correct service URI.
 }) {
   return new gcp.compute.ForwardingRule(args.forwardingRuleName, {
     name: args.forwardingRuleName,
@@ -19,6 +19,6 @@ export function createForwardingRule(args: {
     loadBalancingScheme: 'INTERNAL',
     network: args.networkId,
     subnetwork: args.subnetId,
-    backendService: args.targetServiceAttachmentUri,
+    backendService: args.targetServiceAttachmentUri,  // Ensure this points to the correct service.
   });
 }

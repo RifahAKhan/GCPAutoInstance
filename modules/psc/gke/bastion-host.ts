@@ -11,7 +11,7 @@ export function createBastionHost(args: {
     zone: 'us-east1-b',
     bootDisk: {
       initializeParams: {
-        image: 'debian-cloud/debian-9',
+        image: 'debian-cloud/debian-11',  // Update image to a supported version.
       },
     },
     networkInterfaces: [{
