@@ -13,7 +13,7 @@ export function createForwardingRule(args: {
   return new gcp.compute.ForwardingRule(args.forwardingRuleName, {
     name: args.forwardingRuleName,
     project: args.projectId,
-    region: 'europe-west3-a',
+    region: 'us-central1-a',
     ipAddress: args.staticIpAddress,
     ipProtocol: 'TCP',
     loadBalancingScheme: 'INTERNAL',

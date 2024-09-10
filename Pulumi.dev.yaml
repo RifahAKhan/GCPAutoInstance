@@ -14,4 +14,4 @@ config:
 
   gcp:project: postgresql-infrastructure
 
-  gcp:region: europe-west3-a
+  gcp:region: us-central1-a

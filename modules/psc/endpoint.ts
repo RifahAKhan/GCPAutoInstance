@@ -21,7 +21,7 @@ export class PscEndpoint extends pulumi.ComponentResource {
     const pscEndpoint = new gcp.compute.ServiceAttachment(name, {
       name: args.name,
       project: args.projectId,
-      region: 'europe-west3-a',
+      region: 'us-central1-a',
       targetService: args.target,
       connectionPreference: 'ACCEPT_AUTOMATIC',
       natSubnets: [args.subnetworkId],
