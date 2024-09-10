@@ -1,0 +1,13 @@
+{
+    "name": "postgresql-infrastructure",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/gcp": "^7.38.0",
+        "@pulumi/pulumi": "^3.113.0",
+        "@pulumi/random": "^4.16.3"
+    }
+}

@@ -1,0 +1,9 @@
+config:
+  gcp:project: postgresql-infrastructure
+  gcp:region: europe-west4
+  postgresql-infrastructure:billingaccount: ""
+  postgresql-infrastructure:environment: dev
+  postgresql-infrastructure:folderid: ""
+  postgresql-infrastructure:projectname: postgresql-infrastructure
+  postgresql-infrastructure:projectnumber: "144299492552"
+  postgresql-infrastructure:projectpurpose: "postgresql"

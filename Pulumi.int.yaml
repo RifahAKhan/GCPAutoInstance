@@ -1,0 +1,17 @@
+config:
+
+  postgresql-infrastructure:billingaccount: ""
+
+  postgresql-infrastructure:environment: int
+
+  postgresql-infrastructure:folderid: ""
+
+  postgresql-infrastructure:projectname: postgresql-infrastructure
+
+  postgresql-infrastructure:projectnumber: "144299492552"
+
+  postgresql-infrastructure:projectpurpose: "postgresql"
+
+  gcp:project: postgresql-infrastructure
+
+  gcp:region: europe-west4
