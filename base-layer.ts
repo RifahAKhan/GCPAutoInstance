@@ -24,7 +24,7 @@ export class AdasBaseLayer extends pulumi.ComponentResource {
 
     const subnet = new gcp.compute.Subnetwork(`${name}-subnet`, {
       project: args.projectId,
-      region: 'us-central1-a',
+      region: 'us-east1',
       network: network.id,
       ipCidrRange: '10.0.0.0/24',
     }, { parent: this });

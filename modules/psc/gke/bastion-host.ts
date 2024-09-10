@@ -8,7 +8,7 @@ export function createBastionHost(args: {
 }) {
   return new gcp.compute.Instance(`bastion-host-${args.environment}`, {
     machineType: 'f1-micro',
-    zone: 'us-central1-a',
+    zone: 'us-east1-b',
     bootDisk: {
       initializeParams: {
         image: 'debian-cloud/debian-9',

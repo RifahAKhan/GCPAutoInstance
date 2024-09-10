@@ -12,7 +12,7 @@ export function createServiceAttachment(args: {
   return new gcp.compute.ServiceAttachment(args.serviceAttachmentName, {
     name: args.serviceAttachmentName,
     project: args.projectId,
-    region: 'us-central1-a',
+    region: 'us-east1',
     natSubnets: [args.subnetId],
     targetService: args.targetServiceIp,
     connectionPreference: 'ACCEPT_AUTOMATIC',

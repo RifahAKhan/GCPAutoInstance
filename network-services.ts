@@ -14,7 +14,7 @@ export function createNetworkServices(args: {
   // Cloud NAT
   const natRouter = new gcp.compute.Router(`router-cloud-nat`, {
     name: `router-cloud-nat`,
-    region: 'us-central1-a',
+    region: 'us-east1',
     network: args.networkId,
     bgp: {
       asn: 64514,
@@ -38,7 +38,7 @@ export function createNetworkServices(args: {
     name: `psc-${args.projectPurpose}-eu-we4-subnet`,
     project: args.projectId,
     ipCidrRange: '172.17.1.0/24',
-    region: 'us-central1-a',
+    region: 'us-east1',
     network: args.networkId,
     purpose: 'PRIVATE_SERVICE_CONNECT',
   });
@@ -62,7 +62,7 @@ export function createNetworkServices(args: {
     networkId: args.networkId,
     forwardingRuleName: 'acme',
     targetServiceAttachmentUri:
-      'projects/mb-mcai-transit-service-p-7406/regions/us-central1-a/serviceAttachments/cool-dane',
+      'projects/mb-mcai-transit-service-p-7406/regions/us-east1/serviceAttachments/cool-dane',
   });
 
   // Cloud DNS
